@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+/*
   document.getElementById('btn-ver-mas').addEventListener('click', function () {
     const extra = document.getElementById('extra-info');
     if (extra.style.display === 'none') {
@@ -43,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
       extra.style.display = 'none';
       this.textContent = 'Ver más';
     }
-  });
+  });*/
 
 
   // Verifica si el botón existe antes de añadir el evento
@@ -54,19 +55,33 @@ document.addEventListener("DOMContentLoaded", function () {
         btnConoceMas.addEventListener("click", function (e) {
             e.preventDefault(); // Evita el salto inmediato
 
-            Swal.fire({
-                title: "Bienvenido a AINABI",
-                text: "Transformando la Gestión de Talento con Tecnología Avanzada",
-                imageUrl: "https://unsplash.it/400/200 ",
-                imageWidth: 400,
-                imageHeight: 200,
-                imageAlt: "Imagen representativa de AINABI",
-                confirmButtonText: "Continuar"
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    window.location.href = "#que-es-ainabi";
-                }
-            });
+            Swal.fire("Hola");
         });
     }
+});
+
+  // Verifica si el botón existe antes de añadir el evento
+  document.addEventListener("DOMContentLoaded", function () {
+    const btnEnviado = document.getElementById("btnEnviar");
+
+    if (btnEnviado) {
+        btnEnviado .addEventListener("click", function (e) {
+            e.preventDefault(); // Evita el salto inmediato
+
+            Swal.fire({
+                title: "Enviado!",
+                text: "Muchas gracias por contactarte",
+                imageUrl: "./assets/capiok.png",
+                imageWidth: 400,
+                imageHeight: 400,                
+                imageAlt: "Custom image",
+                confirmButtonText: "Continuar",
+                confirmButtonColor: "#b88b66",
+               
+              });
+             
+        });
+        
+    }
+   
 });
